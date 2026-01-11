@@ -1,0 +1,94 @@
+{% extends "layout.html" %}
+
+{% load static %}
+
+{% block title %} Sign Up | JoyJunction {% endblock %}
+
+{% block content %}
+<div
+  class="min-h-screen p-3 flex items-center justify-center bg-background-200">
+  <div
+    class="flex flex-col md:flex-row w-full md:w-[900px] rounded-2xl overflow-hidden shadow-2xl bg-background-50">
+    <div
+      class="hidden md:block md:w-1/2 relative h-[300px] md:h-[600px] overflow-hidden text-white">
+      <img
+        alt="slide-0"
+        class="absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 brightness-50"
+        src="{% static 'images/login-illustration1.jpg' %}" />
+      <img
+        alt="slide-1"
+        class="absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 brightness-50"
+        src="{% static 'images/login-illustration2.jpg' %}" />
+      <img
+        alt="slide-2"
+        class="absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 brightness-50"
+        src="{% static 'images/login-illustration3.jpg' %}" />
+      <div class="absolute inset-0 flex flex-col justify-between p-6">
+        <div class="flex justify-between">
+          <h1 class="text-2xl font-semibold">JoyJunction</h1>
+          <a
+            class="bg-gray-50 bg-opacity-30 hover:bg-opacity-40 text-sm px-3 py-1 rounded-full transition cursor-pointer" href="/">
+            Back to website →
+          </a>
+        </div>
+        <div class="pb-10">
+          <p class="text-lg">Creating Memories,</p>
+          <p class="text-lg">Let's Capture New Moments</p>
+        </div>
+      </div>
+    </div>
+    <div
+      class="w-full md:w-1/2 p-6 md:p-10 flex flex-col justify-center text-black">
+      <h2 class="text-3xl font-bold mb-2">Create an account</h2>
+      <p class="text-sm mb-6">Already have an account?
+        <a
+          class="text-secondary-400 hover:underline"
+          href="{% url 'login' %}"
+          data-discover="true"
+          >Log in</a
+        >
+      </p>
+      <form class="flex flex-col gap-4">
+        <div class="flex gap-3">
+          <input
+            placeholder="First Name"
+            class="w-1/2 p-3 bg-background-200 rounded-md border-0 focus:border-secondary-200 focus:ring-1 focus:ring-secondary-300 focus:outline-0"
+            type="text" />
+          <input
+            placeholder="Last Name"
+            class="w-1/2 p-3 bg-background-200 rounded-md border-0 focus:border-secondary-200 focus:ring-1 focus:ring-secondary-300 focus:outline-0"
+            type="text" />
+        </div>
+        <input
+          placeholder="Username"
+          class="p-3 bg-background-200 rounded-md border-0 focus:border-secondary-200 focus:ring-1 focus:ring-secondary-300 focus:outline-0"
+          type="text" />
+        <input
+          placeholder="Email Address"
+          class="p-3 bg-background-200 rounded-md border-0 focus:border-secondary-200 focus:ring-1 focus:ring-secondary-300 focus:outline-0"
+          type="email" />
+        <input
+          placeholder="Enter your password"
+          class="p-3 bg-background-200 rounded-md border-0 focus:border-secondary-200 focus:ring-1 focus:ring-secondary-300 focus:outline-0"
+          type="password" />
+        <div class="flex items-center gap-2 text-sm">
+          <input
+            class="text-secondary-400 focus:ring-secondary-200 focus:ring-offset-0 focus:outline-0 focus:border-0"
+            type="checkbox" id="terms" />
+            <label for="terms" class="">
+              I agree to the <a
+              class="text-secondary-400 hover:underline"
+              href="/terms-and-conditions"
+              data-discover="true">terms and conditions</a>          
+            </label>
+        </div>
+        <button
+          type="submit"
+          class="bg-primary-600 hover:bg-primary-700 rounded-full text-white font-bold text-xl py-3 transition">
+          Create Account
+        </button>
+      </form>
+    </div>
+  </div>
+</div>
+{% endblock %}

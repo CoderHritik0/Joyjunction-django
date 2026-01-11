@@ -1,0 +1,4 @@
+.login-banner > img {
+	-webkit-animation: fade-in-out 3s ease-out both;
+	animation: fade-in-out 3s ease-out both;
+}
