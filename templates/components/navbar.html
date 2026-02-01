@@ -1,0 +1,59 @@
+{% load static %}
+<div class="container navbar bg-transparent px-10">
+  <div class="nav-brand">
+    <a href="{% url 'index' %}">
+      <img
+        src="{% static 'images/logo.png' %}"
+        alt="JoyJunction Logo"
+        class="h-20 w-auto" />
+    </a>
+  </div>
+  <div>
+    <nav>
+      <ul class="flex gap-8 text-lg font-medium">
+        <li
+          class="hover:text-accent-300 hover:-translate-y-1 transition-all transition-discrete">
+          <a href="{% url 'index' %}">Home</a>
+        </li>
+        <li
+          class="hover:text-accent-300 hover:-translate-y-1 transition-all transition-discrete">
+          <a href="">Category</a>
+        </li>
+        <li
+          class="hover:text-accent-300 hover:-translate-y-1 transition-all transition-discrete">
+          <a href="">Locations</a>
+        </li>
+        <li
+          class="hover:text-accent-300 hover:-translate-y-1 transition-all transition-discrete">
+          <a href="">Contact</a>
+        </li>
+        <li
+          class="hover:text-accent-300 hover:-translate-y-1 transition-all transition-discrete">
+          <a href="">About us</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+  <div>
+    <ul class="flex gap-6 text-lg">
+      <li
+        class="hover:text-accent-300 hover:-translate-y-1 transition-all transition-discrete">
+        <a href=""> {% include 'components/icons/search.html' %} </a>
+      </li>
+      <li
+        class="hover:text-accent-300 hover:-translate-y-1 transition-all transition-discrete">
+        <a href=""> {% include 'components/icons/heart.html' %} </a>
+      </li>
+      <li
+        class="hover:text-accent-300 hover:-translate-y-1 transition-all transition-discrete">
+        <a href="{% url 'login' %}">
+          {% include 'components/icons/user.html' %}
+        </a>
+      </li>
+      <li
+        class="hover:text-accent-300 hover:-translate-y-1 transition-all transition-discrete">
+        <a href=""> {% include 'components/icons/cart.html' %} </a>
+      </li>
+    </ul>
+  </div>
+</div>
